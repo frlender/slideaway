@@ -1,3 +1,7 @@
-span(name='header').list-group-item {{item.title}}
+span(name='header' ng-click="item.expanded = !item.expanded" ng-class="{'expanded':item.expanded}").list-group-item.row 
+	div.title2 {{item.title}} 
+	div.desc {{descs[item.title]?descs[item.title]:''}} 
+	div.img-container(ng-if="item.img")
+		img(ng-src="css/img/{{item.img.src}}" ng-style="{'height':item.img.height}").img
 ul.content2.list-group
 	li(ng-repeat="item in item.items" ng-include="'recur.html'" ng-init="signalLast(item)")

@@ -115,6 +115,8 @@ z-index:99;
 
 .content2{
   display: none;
+  list-style-type:none;
+  padding-left:20px
 }
 .center2{
 	font-weight: bold;
@@ -154,3 +156,37 @@ footer div{
 footer p{
   margin-top: 1em;
 }
+
+[name=header]{
+  cursor:pointer;
+}
+
+[name=header] div.img-container{
+  float:right;
+}
+
+[name=header] img{
+  height:30px
+}
+
+.expanded{
+  background-color:#79BFD6;
+  color:white;
+  // font-weight: bold;
+}
+
+div.title2{
+  display: inline-block;
+}
+div.desc{
+  font-size: 0.9em;
+  color:grey;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.row{
+  display: flex;
+  align-items: baseline;
+}
+
