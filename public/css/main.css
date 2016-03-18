@@ -1,0 +1,156 @@
+.legend{
+	position: absolute;
+left:50%;
+margin-left: -195px;
+z-index:99;
+  margin-top:10px;
+  /*width: 600px;*/
+}
+
+.legend-type{
+  height:20px;
+}
+
+.legend-center{
+  /*height:20px;*/
+}
+
+.legend-center img{
+    height:26px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.legend-center a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+.detail-view{
+	width:400px;
+	border-style: solid;
+  	border-width: thin;;
+  	z-index: 999999999;
+  	background-color: white;
+  	/*left:1041px;*/
+  	left:665.1px;
+  	top:122px;
+  	position: absolute;
+  	padding:5px;
+  	display: none;
+}
+
+.draggable-center-img{
+  width:20px;
+  vertical-align: top;
+}
+
+#close{
+	float:right;
+	padding-top:0px;
+	padding-right:5px;
+}
+
+#dynamic{
+	margin-top: 5px;
+	margin-left:3px;
+}
+
+.pert-cell{
+	font-weight: bold;
+}
+
+.milestone{
+	margin-top: 10px;
+}
+
+.center{
+	font-size: 1.2em;
+	font-style: italic;
+}
+
+.assay{
+  font-size:1em;
+}
+
+.assay-info{
+	font-size: 0.7em;
+}
+
+
+/*expandable*/
+.container {
+    width:100%;
+}
+.container div {
+    width:100%;
+}
+
+.header {
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+    width:200px;
+    border-style: solid;
+    padding-left: 30px;
+    border-width: thin;
+}
+
+.container .header {
+    /*background-color:#d3d3d3;*/
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+    width:200px;
+    border-style: solid;
+  	padding-left: 30px;
+  	border-width: thin;
+}
+
+
+.container .content {
+    display: none;
+    padding : 5px;
+}
+
+.content2{
+  display: none;
+}
+.center2{
+	font-weight: bold;
+}
+
+.tag-table{
+  margin-left: 100px;
+  width:80%;
+  display:none;
+}
+
+.row-name-cell{
+  width:100px;
+  text-align:center;
+  height:40px;
+}
+
+.tag-cell{
+  text-align: left;
+}
+
+.footer {
+/*position: absolute;*/
+bottom: 0;
+width: 100%;
+min-height: 60px;
+background-color: #f5f5f5;
+font-size:1.2em;
+}
+
+footer div{
+  margin-top: 12px;
+  font-size:0.8em;
+  text-align:center;
+}
+
+footer p{
+  margin-top: 1em;
+}

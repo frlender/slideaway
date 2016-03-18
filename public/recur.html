@@ -1,0 +1,4 @@
+<span name="header" class="list-group-item">{{item.title}}</span>
+<ul class="content2 list-group">
+  <li ng-repeat="item in item.items" ng-include="'recur.html'" ng-init="signalLast(item)"></li>
+</ul>

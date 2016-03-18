@@ -1,0 +1,31 @@
+<html lang="en" ng-app='chart'>
+<head>
+	<meta charset="utf-8">
+	<title>jy</title>
+	
+	<script src="libraries/jquery/jquery.min.js"></script>
+	<script src="libraries/angular/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+<body>
+
+<div id="draggable" class="" style="">
+	<p>Drag me around</p>
+</div>
+
+<table ng-controller="tagTable">
+      <input ng-model="cc">
+      <toody>
+        <tr>
+          <td>Cells:</td>
+          <td id="cellTags">{{cells}}, {{cc}}</td>
+        </tr>
+        <tr>
+          <td>Perturbagens:</td>
+          <td id="perturbagenTags">{{perts}}</td>
+        </tr>
+      </toody>
+</table>
+
+<script>
+</script>

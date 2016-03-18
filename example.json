@@ -1,0 +1,87 @@
+[
+		{"title":"By Assay",
+		 "desc":"",
+		 "items":[
+		 	{"title":"Transcriptomics",
+		 	 "desc":"",
+		 	 "items":[
+		 	 	{"title":"L1000","desc":"","items":[]},
+		 	 	{"title":"RNA-seq","desc":"","items":[]},
+		 	 ]},
+		 	 {"title":"Epigenomics",
+		 	 "desc":"",
+		 	 "items":[
+		 	 	{"title":"GCP","desc":"","items":[]},
+		 	 	{"title":"ATAC-seq","desc":"","items":[]},
+		 	 ]},
+		 	 {"title":"Proteomics",
+		 	 "desc":"",
+		 	 "items":[
+		 	 	{"title":"GCP","desc":"","items":[]},
+		 	 	{"title":"P100","desc":"","items":[]},
+		 	 	{"title":"SWATH-MS","desc":"","items":[]},
+		 	 	{"title":"Mass-Spec (Sinai)","desc":"","items":[]},
+		 	 	{"title":"Mass-Spec (Harvard)","desc":"","items":[]},
+		 	 	{"title":"RPPA","desc":"","items":[]},
+		 	 ]},
+		 	  {"title":"Imaging",
+		 	 "desc":"",
+		 	 "items":[
+		 	 	{"title":"MEMA","desc":"","items":[]},
+		 	 	{"title":"Viability","desc":"","items":[]},
+		 	 	{"title":"Immunofluorescence","desc":"","items":[]},
+		 	 	{"title":"Neurolincs (Imaging)","desc":"","items":[]},
+		 	 ]},
+		 	  {"title":"KinomeScan",
+		 	 "desc":"",
+		 	 "items":[
+		 	 	{"title":"KinomeScan","desc":"","items":[]}
+		 	 ]}
+		 ]
+		},
+		{"title":"By Center",
+		 "desc":"",
+		 "style":"'header'",
+		 "items":[
+		 	{"title":"Broad Transcriptomics",
+		 	 "desc":"",
+		 	 "items":[
+		 	 	{"title":"L1000","desc":"","items":[]}
+		 	 ]},
+		 	 {"title":"Broad Proteomics",
+		 	 "desc":"",
+		 	 "items":[
+		 	 	{"title":"P100","desc":"","items":[]},
+		 	 	{"title":"GCP","desc":"","items":[]},
+		 	 ]},
+		 	 {"title":"HMS LINCS",
+		 	 "desc":"",
+		 	 "items":[
+		 	 	{"title":"Immunofluorescence","desc":"","items":[]},
+		 	 	{"title":"Viability","desc":"","items":[]},
+		 	 	{"title":"KinomeScan","desc":"","items":[]},
+		 	 	{"title":"Proteomics","desc":"","items":[]}
+		 	 ]},
+		 	  {"title":"MEP LINCS",
+		 	 "desc":"",
+		 	 "items":[
+		 	 	{"title":"MEMA","desc":"","items":[]},
+		 	 	{"title":"RPPA","desc":"","items":[]},
+		 	 ]},
+		 	 {"title":"NeuroLINCS",
+		 	 "desc":"",
+		 	 "items":[
+		 	 	{"title":"ATAC-seq","desc":"","items":[]},
+		 	 	{"title":"RNA-seq","desc":"","items":[]},
+		 	 	{"title":"SWATH-MS","desc":"","items":[]},
+		 	 	{"title":"Imaging","desc":"","items":[]}		 	 
+		 	 ]},
+		 	 {"title":"DToxS",
+		 	 "desc":"",
+		 	 "items":[
+		 	 	{"title":"RNA-seq","desc":"","items":[]},
+		 	 	{"title":"Proteomics","desc":"","items":[],"last":true},
+		 	 ]}
+		 ]
+		}
+	]
