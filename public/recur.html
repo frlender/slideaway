@@ -1,7 +1,24 @@
-<span name="header" ng-click="item.expanded = !item.expanded" ng-class="{'expanded':item.expanded}" class="list-group-item row"> 
-  <div class="title2">{{item.title}} </div>
-  <div class="desc">{{descs[item.title]?descs[item.title]:''}} </div>
-  <div ng-if="item.img" class="img-container"><img ng-src="css/img/{{item.img.src}}" ng-style="{'height':item.img.height}" class="img"/></div></span>
-<ul class="content2 list-group">
+<span name="header" ng-click="item.expanded = !item.expanded;expand($event,item)" ng-class="{'expanded':item.expanded}" class="list-group-item"> <i ng-if="item.expanded" class="fa fa-caret-down"></i><i ng-if="!item.expanded" class="fa fa-caret-right"></i><span>         {{item.title}} </span><span class="desc">{{item.desc!='None'&&descs[item.title]?descs[item.title]:''}} </span>
+  <div ng-if="item.img"><img ng-src="css/img/{{item.img.src}}" ng-style="{'height':item.img.height}" class="img"/></div></span>
+<ul ng-if="item.items &amp;&amp; item.items.length" ng-class="{'content-hide':!item.initExpanded, 'content-show':item.initExpanded}" ng-init="item.initExpanded=item.expanded" class="list-group">
   <li ng-repeat="item in item.items" ng-include="'recur.html'" ng-init="signalLast(item)"></li>
 </ul>
+<div ng-if="item.datasets" ng-class="{'content-hide':!item.initExpanded, 'content-show':item.initExpanded}" ng-init="item.initExpanded=item.expanded">
+  <table class="table">
+    <thead>
+      <th ng-repeat="header in item.datasets.headers">{{header}}</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="row in item.datasets.items">
+        <td ng-repeat="item in row"> <span ng-if="!isLongArray(item)">{{format(item)}}</span>
+          <div ng-if="isLongArray(item)">
+            <div> 
+              <input ng-model="item.search"/>
+            </div>
+            <div><a ng-class="item.pagination.limitLower&gt;0?'':'disabled'" ng-click="item.pagination.previous()" class="btn-modern disabled"><</a><span ng-repeat="subItem in filtered=(item.data | filter:item.search | filter:item.pagination.limit)">{{subItem}},</span><a ng-class="item.pagination.limitUpper&gt;=item.pagination.matchedSize?'disabled':''" ng-click="item.pagination.next()" class="btn-modern">next {{item.pagination.limitUpper}}</a></div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

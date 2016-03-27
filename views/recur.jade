@@ -1,7 +1,31 @@
-span(name='header' ng-click="item.expanded = !item.expanded" ng-class="{'expanded':item.expanded}").list-group-item.row 
-	div.title2 {{item.title}} 
-	div.desc {{descs[item.title]?descs[item.title]:''}} 
-	div.img-container(ng-if="item.img")
+span(name='header' ng-click="item.expanded = !item.expanded;expand($event,item)" ng-class="{'expanded':item.expanded}").list-group-item 
+	i(ng-if="item.expanded").fa.fa-caret-down
+	i(ng-if="!item.expanded").fa.fa-caret-right
+	span          {{item.title}} 
+	span.desc {{item.desc!='None'&&descs[item.title]?descs[item.title]:''}} 
+	div(ng-if="item.img")
 		img(ng-src="css/img/{{item.img.src}}" ng-style="{'height':item.img.height}").img
-ul.content2.list-group
+ul(ng-if="item.items && item.items.length" ng-class="{'content-hide':!item.initExpanded, 'content-show':item.initExpanded}" ng-init="item.initExpanded=item.expanded").list-group
 	li(ng-repeat="item in item.items" ng-include="'recur.html'" ng-init="signalLast(item)")
+
+div(ng-if="item.datasets" ng-class="{'content-hide':!item.initExpanded, 'content-show':item.initExpanded}" ng-init="item.initExpanded=item.expanded")
+	
+	table.table
+		thead
+			th(ng-repeat="header in item.datasets.headers") {{header}}
+		tbody
+			tr(ng-repeat="row in item.datasets.items")
+				td(ng-repeat="item in row") 
+					span(ng-if='!isLongArray(item)') {{format(item)}}
+					div(ng-if='isLongArray(item)')
+						div 
+							input(ng-model="item.search")
+						div
+							a(class="btn-modern disabled" ng-class="item.pagination.limitLower>0?'':'disabled'" ng-click="item.pagination.previous()") <
+							span(ng-repeat='subItem in filtered=(item.data | filter:item.search | filter:item.pagination.limit)'){{subItem}},
+							a(ng-class="item.pagination.limitUpper>=item.pagination.matchedSize?'disabled':''"  class="btn-modern" ng-click="item.pagination.next()") next {{item.pagination.limitUpper}}
+
+
+
+
+

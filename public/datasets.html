@@ -1,0 +1,11 @@
+
+<table>
+  <thead>
+    <th ng-repeat="header in item.datasets.headers">{{header}}</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in item.datasets.items">
+      <td ng-repeat="item in row">{{typeof(item)==Array?item.join(', '):item}}</td>
+    </tr>
+  </tbody>
+</table>

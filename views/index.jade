@@ -24,8 +24,12 @@ html(lang='en', ng-app='chart')
     
     //- script(src='scripts/controllers.js')   
   body(ng-controller='expand')
-    div(ng-repeat="item in data" )
-        div(ng-include="'recur.html'")
+    div.btns
+        a.btn(ng-click="switchTo('byAssay')" ng-class="{'expanded':current=='byAssay'}") By Assay
+        a.btn(ng-click="switchTo('byCenter')" ng-class="{'expanded':current=='byCenter'}") By Center
+        //- a.btn(ng-click="test()") test
+    
+    div(ng-include="'recur.html'" ng-init="switchTo('byCenter')")
 
     hr
       
@@ -33,6 +37,8 @@ html(lang='en', ng-app='chart')
   if dev
     script(src="scripts/main.js")
     script(src='scripts/app.js')
-    script(src="scripts/expandable.js")
+    script(src='scripts/services.js')
+
+    //- script(src="scripts/expandable.js")
   else
     script(src="dist/main.min.js")

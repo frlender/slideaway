@@ -18,12 +18,12 @@
     <script src="libraries/angular/angular.min.js">    </script>
   </head>
   <body ng-controller="expand">
-    <div ng-repeat="item in data">
-      <div ng-include="'recur.html'"></div>
+    <div class="btns"><a ng-click="switchTo('byAssay')" ng-class="{'expanded':current=='byAssay'}" class="btn">By Assay</a><a ng-click="switchTo('byCenter')" ng-class="{'expanded':current=='byCenter'}" class="btn">By Center</a>
     </div>
+    <div ng-include="'recur.html'" ng-init="switchTo('byCenter')"></div>
     <hr>
   </body>
   <script src="scripts/main.js"></script>
   <script src="scripts/app.js"></script>
-  <script src="scripts/expandable.js"></script>
+  <script src="scripts/services.js"></script>
 </html>

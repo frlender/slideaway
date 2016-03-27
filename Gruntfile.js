@@ -11,7 +11,8 @@ module.exports = function(grunt) {
             },
             files: {
               "public/index.html":"views/index.jade",
-              'public/recur.html':'views/recur.jade'
+              'public/recur.html':'views/recur.jade',
+              'public/datasets.html':'views/datasets.jade'
             }
         },
         release: {

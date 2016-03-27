@@ -14,12 +14,13 @@
 //     });
 
 // });
-$(herald).bind('lastItem',function(e,evt){
+// $(herald).bind('lastItem',function(e,evt){
 
-    $("[name=header]").each(function(idx){
-        $(this).click(function(){
-            $(this).next().slideToggle(500);
-        });
-    })
+//     $("[name=header]").each(function(idx,val){
+//         $(this).click(function(){
+//             $(this).next().slideToggle(500);
+//         });
 
-})
+//     })
+
+// })

@@ -1,31 +1,62 @@
-<html lang="en" ng-app='chart'>
-<head>
-	<meta charset="utf-8">
-	<title>jy</title>
-	
-	<script src="libraries/jquery/jquery.min.js"></script>
-	<script src="libraries/angular/angular.min.js"></script>
-    <script src="scripts/app.js"></script>
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en" ng-app="chart">
+  <head>
+    <title> </title>
+    <link rel="shortcut icon" href="css/images/?.ico" type="image/x-icon">
+    <!--style-->
+    <link rel="stylesheet" href="libraries/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/typeahead.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tag.css">
+    <!-- libraries -->
 
-<div id="draggable" class="" style="">
-	<p>Drag me around</p>
-</div>
+    <script src="libraries/jquery/jquery.min.js"></script>
+    <script src="versioned/jquery-ui.min.js"></script>
+  </head>
+  <body>
+<div class="container">
+      <div class="header"><span>Entries not included</span></div>
+      <div class="content">
+        <table class='table'>
+          <thead>
+            <th>abc</th>
+            <th>def</th>
+          </thead>
+          <tbody>
+            <tr><td>adef</td><td>def</td></tr>
+            <tr><td>addd</td><td>dfefe</td></tr>
+          </tbody>
+        </table>
+<!--         <div> <span class="center2">DToxS</span>    (reason: cell-lines not sure)
+          <ul>
+            <li>RNASeq.Cardiomyocyte "Efficacy/Toxicity Ratio" Joint project- Collaborators: ISMMS, UCI, HMS, Broad/Golub, Broad/Jaffe, OHSU & DCIC*</li>
+            <li>Proteomics.Cardiomyocyte "Efficacy/Toxicity Ratio" Joint project- Collaborators: ISMMS, UCI, HMS, Broad/Golub, Broad/Jaffe, OHSU & DCIC*</li>
+            <li>Western blots/PCR (validation assays).Cardiomyocyte "Efficacy/Toxicity Ratio" Joint project- Collaborators: ISMMS, UCI, HMS, Broad/Golub, Broad/Jaffe, OHSU & DCIC*</li>
+          </ul>
+        </div>
+        <div> <span class="center2">HMS LINCS </span>   (reason: perturbations not sure)
+          <ul>
+            <li>LJP5&6-growth inhibition/drug combinations: Sensitivity measures of 6 breast cancer cell lines to combination treatment of kinase inhibitors based on results of  dataset LJP5&6-growth inhibition/single drugs</li>
+            <li>LJP5&6-L1000/drug combinations: L1000 response of 6 breast cancer cell lines to treatment plates LJP7-9 (177 targeted drugs). Complement  to dataset LJP5&6-L1000/single drugs</li>
+          </ul>
+        </div>
+        <div> <span class="center2">NeuroLINCS </span>   (reason: perturbations not sure, QC entry)
+          <ul>
+            <li>RNASeq for control and diseased iMNs plus perturbations</li>
+            <li>QC and SOP development for proteomic alysis  iPSC to  motor neuron differentiation</li>
+            <li>Quantitative discovery proteomics (SWATH), add perturbagens</li>
+            <li>Epigenomics-ATAC-Seq for control and disease iMNs plus perturbations</li>
+          </ul>
+        </div> -->
+      </div>
+    </div>
+  </body>
 
-<table ng-controller="tagTable">
-      <input ng-model="cc">
-      <toody>
-        <tr>
-          <td>Cells:</td>
-          <td id="cellTags">{{cells}}, {{cc}}</td>
-        </tr>
-        <tr>
-          <td>Perturbagens:</td>
-          <td id="perturbagenTags">{{perts}}</td>
-        </tr>
-      </toody>
-</table>
-
-<script>
-</script>
+  <script>
+    
+    $('.header').click(function(){
+            $(this).next().slideToggle(500);
+  });
+  </script>
+</html>
